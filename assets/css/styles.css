@@ -18,12 +18,10 @@ nav{
     /*size of the nav bar*/
 }
 
-label.logo{
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-    /*will need to replace with img edits once real logo is added*/
+.logo{
+    width: 600px;
+    padding: 15px 100px;
+    /* can't seem to achieve desired effect. Ask someone in class*/
 }
 
 nav ul{
@@ -49,6 +47,7 @@ nav ul li a{
 a.active,a:hover{
     background-color: pink;
     transition: .5s;
+    padding: 10px;
 }
 
 .checkbtn{
@@ -64,11 +63,70 @@ a.active,a:hover{
     display: none;
 }
 
-@media (min-width: 952px) /*double check breakpoint*/ {
-    label.logo{
-        font-size: 30px; /*replace with img of logo*/
-        padding-left: 50px;
-    }
+
+* /*???*/{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    /*splits content into separate columns*/ 
+}
+
+.footer{
+    background-color: bisque;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: purple;
+    margin-bottom: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    display: block; /*not sure what these things are doing but can confirm this section effects the foor*/
+}
+
+.footer-col .social-links a /*this section doesn't work cause I broke the social icons. Check with someone*/{ 
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: palegreen;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line height: 40px;
+    border-radius: 50%; /*makes it a cirle I believe?*/
+}
+
+.footer-col .social-links a:hover /*also doesn't do anything cause social icon link broken*/{
+    color: pink;
+    background-color: blue;
+}
+
+@media (min-width: 952px) /*double check breakpoint ALSO ask about adding shit. do I need to make a new thing for everything or can I umbrella it*/ {
+    .logo{
+        width: 300px;
+        padding: 10px;
+        margin: auto;
+    } /* cannot figure out how to effect the logo for the life of me! Ask someone in class*/
+
     nav ul li a{
         font-size: 16px;
     }
