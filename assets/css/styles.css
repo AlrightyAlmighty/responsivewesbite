@@ -1,15 +1,57 @@
 *{
-    padding: 0;
-    margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
 
+.wrapper {
+    display: grid;
+
+    /*define column count btw this is a comment*/
+    grid-template-columns: repeat (12, 1fr);
+
+    /* define rows */
+    grid-auto-rows: minmax(100px, auto);
+
+    /*define column gap */
+    grid-column-gap: 2rem;
+
+    grid-template-areas:
+    /* fullstops mean empty columns - no content */
+        "h h h h h h h h h h h h"
+        ". . . m m m m m m . . ."
+        "fa fa fa fa fa fa fa fa fb fb fb fb";
+}
+
+.header {
+    grid-area: h;
+}
+
+.main {
+    grid-area: m;
+}
+
+.footer-a {
+    grid-area: fa;
+}
+
+.footer-b {
+    grid-area: fb;
+}
+
+.acknowledgement{
+    grid-area: ac;
+}
+
+.socials{
+    grid-area: so;
+}
+
 body{
     font-family:'Courier New', Courier, monospace
     /*temp font. Add Google font later*/
-}
+    }
+
 
 nav{
     background-color: bisque;
@@ -19,8 +61,8 @@ nav{
 }
 
 .logo{
-    width: 600px;
-    padding: 15px 100px;
+    max-width: 100%; /* % means it doesn't think it's px */
+    padding: 15px 15px;
     /* can't seem to achieve desired effect. Ask someone in class*/
 }
 
@@ -63,27 +105,18 @@ a.active,a:hover{
     display: none;
 }
 
-
-* /*???*/{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .container{
     max-width: 1170px;
     margin: auto;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    /*splits content into separate columns*/ 
-}
-
 .footer{
     background-color: bisque;
     padding: 70px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .footer-col{
@@ -96,7 +129,6 @@ a.active,a:hover{
     color: purple;
     margin-bottom: 15px;
     font-weight: 500;
-    position: relative;
 }
 
 .footer-col p {
@@ -120,19 +152,15 @@ a.active,a:hover{
     background-color: blue;
 }
 
-@media (min-width: 952px) /*double check breakpoint ALSO ask about adding shit. do I need to make a new thing for everything or can I umbrella it*/ {
-    .logo{
-        width: 300px;
-        padding: 10px;
-        margin: auto;
-    } /* cannot figure out how to effect the logo for the life of me! Ask someone in class*/
+/*responsive elements below*/
 
+@media (min-width: 952px) /*double check breakpoint ALSO ask about adding shit. do I need to make a new thing for everything or can I umbrella it*/ {
     nav ul li a{
         font-size: 16px;
     }
 }
 
-@media (max-width: 858px) /*double check breakpoint*/ {
+@media (max-width: 1002px) /*this is the first breakpoint*/ {
     .checkbtn{
         display: block;
     }
@@ -161,5 +189,9 @@ a.active,a:hover{
     #check:checked ~ ul{
         left: 0;
     }
+}
+
+@media (max-width: 465px) /*this is the second breakpoint for the header*/ {
 
 }
+
