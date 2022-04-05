@@ -7,11 +7,13 @@
 .wrapper {
     display: grid;
 
+    height: 100vh;
+
     /*define column count btw this is a comment*/
     grid-template-columns: repeat (12, 1fr);
 
     /* define rows */
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-rows: auto 1fr auto;
 
     /*define column gap */
     grid-column-gap: 2rem;
@@ -20,7 +22,7 @@
     /* fullstops mean empty columns - no content */
         "h h h h h h h h h h h h"
         ". . . m m m m m m . . ."
-        "fa fa fa fa fa fa fa fa fb fb fb fb";
+        ". . . . fa fa fb fb . . . .";
 }
 
 .header {
@@ -39,19 +41,13 @@
     grid-area: fb;
 }
 
-.acknowledgement{
-    grid-area: ac;
-}
-
-.socials{
-    grid-area: so;
-}
-
 body{
     font-family:'Courier New', Courier, monospace
     /*temp font. Add Google font later*/
     }
 
+
+/*nav bar css*/
 
 nav{
     background-color: bisque;
@@ -60,10 +56,10 @@ nav{
     /*size of the nav bar*/
 }
 
-.logo{
+.logo /*image*/{
     max-width: 100%; /* % means it doesn't think it's px */
     padding: 15px 15px;
-    /* can't seem to achieve desired effect. Ask someone in class*/
+    a:hover
 }
 
 nav ul{
@@ -80,7 +76,7 @@ nav ul li{
 }
 
 nav ul li a{
-    font-size: 17px
+    font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     /*changes writing on nav bar*/
@@ -89,7 +85,6 @@ nav ul li a{
 a.active,a:hover{
     background-color: pink;
     transition: .5s;
-    padding: 10px;
 }
 
 .checkbtn{
@@ -105,22 +100,17 @@ a.active,a:hover{
     display: none;
 }
 
+
+
+
+/*footer css*/
+
 .container{
-    max-width: 1170px;
-    margin: auto;
+    padding: 15px;
 }
 
-.footer{
-    background-color: bisque;
-    padding: 70px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
 
 .footer-col{
-    width: 25%;
     padding: 0 15px;
 }
 
@@ -132,22 +122,21 @@ a.active,a:hover{
 }
 
 .footer-col p {
-    margin-bottom: 10px;
-    display: block; /*not sure what these things are doing but can confirm this section effects the foor*/
+    margin-bottom: 15px;
 }
 
-.footer-col .social-links a /*this section doesn't work cause I broke the social icons. Check with someone*/{ 
+.footer-col .social-links a /*this affects the social media icons*/{ 
     display: inline-block;
     height: 40px;
     width: 40px;
     background-color: palegreen;
     margin: 0 10px 10px 0;
     text-align: center;
-    line height: 40px;
+    line-height: 40px;
     border-radius: 50%; /*makes it a cirle I believe?*/
 }
 
-.footer-col .social-links a:hover /*also doesn't do anything cause social icon link broken*/{
+.footer-col .social-links a:hover {
     color: pink;
     background-color: blue;
 }
