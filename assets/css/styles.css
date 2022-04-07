@@ -120,7 +120,8 @@ a.active,a:hover{
     /* fullstops mean empty columns - no content */
         "mi mi mi mi mi mi mi mi mi mi mi mi mi"
         ". . . it it it it it it it . . ."
-        ". . . wh wh wh wh wh wh wh . . .";
+        ". . . wh wh wh wh wh wh wh . . ."
+        ". . . gi gi gi gi gi gi gi . . .";
 }
 
 .main-image {
@@ -136,15 +137,78 @@ a.active,a:hover{
     text-align: center;
 }
 
-/* .citycommissions {
-    grid-area: cc;
+/* cards start - can't seem to work out how to adjust size or put below content */
+
+.grid-item {
+    grid-area: gi;
+    background-color: blanchedalmond;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 3rem;
 }
 
-.cabicon {
-    grid-area: ic;
-} fix*/
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
 
-/*footer css*/
+.card-img {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 3rem;
+}
+
+.card-header {
+    font-size: 3rem;
+    font-weight: 500;
+    color: rebeccapurple;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color:blue;
+    margin-bottom: 2.5rem;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: cornflowerblue;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+
+.card-btn:hover, .card-btn:active {
+    background-color: brown;
+}
+
+.card-btn:hover span, .card-btn:active span {
+    margin-left: 1.5rem;
+}
+/* end card */
 
 .container{
     padding: 15px;
@@ -190,7 +254,7 @@ a.active,a:hover{
     }
 }
 
-@media (max-width: 1002px) /*this is the first breakpoint*/ {
+@media (max-width: 1002px) /*this is the first breakpoint - also need to covert to em not px*/ {
     .checkbtn{
         display: block;
     }
@@ -221,7 +285,11 @@ a.active,a:hover{
     }
 }
 
-@media (max-width: 465px) /*this is the second breakpoint for the header*/ {
+@media (max-width: 60em) /*this is the second breakpoint for the header*/ {
 
+    .grid {
+        grid-gap: 3rem;
+        margin: 3rem;
+    }
 }
 
