@@ -2,6 +2,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    /*page reset*/
 }
 
 .wrapper {
@@ -21,8 +22,8 @@
     grid-template-areas:
     /* fullstops mean empty columns - no content */
         "h h h h h h h h h h h h"
-        ". . . m m m m m m . . ."
-        ". . . . fa fa fb fb . . . .";
+        "m m m m m m m m m m m m"
+        "fa fa fa fa fa fa fb fb fb fb fb fb";
 }
 
 .header {
@@ -44,7 +45,7 @@
 body{
     font-family:'Courier New', Courier, monospace
     /*temp font. Add Google font later*/
-    }
+}
 
 
 /*nav bar css*/
@@ -56,10 +57,14 @@ nav{
     /*size of the nav bar*/
 }
 
+.logo-hover, .logo-hover a:hover {
+    background-color: transparent;
+    display: inline;
+}
+
 .logo /*image*/{
     max-width: 100%; /* % means it doesn't think it's px */
     padding: 15px 15px;
-    a:hover
 }
 
 nav ul{
@@ -100,8 +105,44 @@ a.active,a:hover{
     display: none;
 }
 
+/*main content*/
 
+.main {
+    display: grid;
 
+    /*define column count btw this is a comment*/
+    grid-template-columns: repeat (12, 1fr);
+
+    /*define column gap */
+    grid-column-gap: 2rem;
+
+    grid-template-areas:
+    /* fullstops mean empty columns - no content */
+        "mi mi mi mi mi mi mi mi mi mi mi mi mi"
+        ". . . it it it it it it it . . ."
+        ". . . wh wh wh wh wh wh wh . . .";
+}
+
+.main-image {
+   grid-area: mi;
+}
+
+.intro-text {
+    grid-area: it;
+}
+
+.whats-happening {
+    grid-area: wh;
+    text-align: center;
+}
+
+/* .citycommissions {
+    grid-area: cc;
+}
+
+.cabicon {
+    grid-area: ic;
+} fix*/
 
 /*footer css*/
 
