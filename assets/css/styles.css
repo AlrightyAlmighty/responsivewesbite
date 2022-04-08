@@ -137,7 +137,7 @@ a.active,a:hover{
     text-align: center;
 }
 
-/* cards start - can't seem to work out how to adjust size or put below content */
+/* cards start  (homepage) - can't seem to work out how to adjust size or put below content */
 
 .grid-item {
     grid-area: gi;
@@ -164,6 +164,7 @@ a.active,a:hover{
 
 .card-content {
     padding: 3rem;
+    text-align: center;
 }
 
 .card-header {
@@ -208,8 +209,80 @@ a.active,a:hover{
 .card-btn:hover span, .card-btn:active span {
     margin-left: 1.5rem;
 }
-/* end card */
+/* end card (homepage)*/
 
+.news {
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    grid-column-gap: 2rem;
+    grid-template-areas:
+        "nh nh nh nh nh nh nh nh nh nh nh nh"
+        "c c c c c c c c c c c c"
+        "c c c c c c c c c c c c";
+}
+
+.news-heading {
+    grid-area: nh;
+    text-align: center;
+}
+
+.news-card {
+    grid-area: c;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    background-color: green;
+}
+
+.news-card:hover {
+    background-color: purple;
+}
+
+/*end news page*/
+
+/*start about us page */
+
+.about-us /*why can I never get this shit to work*/{
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    grid-column-gap: 2rem;
+    grid-template-areas:
+        "ab ab ab ab ab ab ab ab ab ab ab ab"
+        ". . . ai ai ai ai ai ai . . ."
+        ". . . ot ot ot ot ot ot . . ."
+        "p p p p p p p p p p p p";
+}
+
+.about-banner {
+    grid-area: ab;
+}
+
+.about-info {
+    grid-area: ai;
+}
+
+.our-team {
+    grid-area: ot;
+}
+
+.peeps-card {
+    grid-area: p;
+    grid-area: p;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    background-color: green;
+}
+
+.peeps-card:hover {
+    background-color:aquamarine;
+}
+
+/* footer start */
 .container{
     padding: 15px;
 }
@@ -245,6 +318,8 @@ a.active,a:hover{
     color: pink;
     background-color: blue;
 }
+
+/*footer end */
 
 /*responsive elements below*/
 
