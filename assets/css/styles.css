@@ -107,7 +107,7 @@ a.active,a:hover{
 
 /*main content*/
 
-.main {
+.index-main {
     display: grid;
 
     /*define column count btw this is a comment*/
@@ -118,14 +118,15 @@ a.active,a:hover{
 
     grid-template-areas:
     /* fullstops mean empty columns - no content */
-        "mi mi mi mi mi mi mi mi mi mi mi mi mi"
-        ". . . it it it it it it it . . ."
-        ". . . wh wh wh wh wh wh wh . . ."
-        ". . . gi gi gi gi gi gi gi . . .";
+        "mi mi mi mi mi mi mi mi mi mi mi mi"
+        "it it it it it it it it it it it it"
+        "wh wh wh wh wh wh wh wh wh wh wh wh"
+        "c1 c1 c1 c1 c1 c1 c2 c2 c2 c2 c2 c2";
 }
 
 .main-image {
    grid-area: mi;
+   display: inline;
 }
 
 .intro-text {
@@ -139,15 +140,22 @@ a.active,a:hover{
 
 /* cards start  (homepage) - can't seem to work out how to adjust size or put below content */
 
+.card-1 {
+    grid-area: c1;
+}
+
+.card-2 {
+    grid-area: c2;
+}
+
 .grid-item {
-    grid-area: gi;
     background-color: blanchedalmond;
     border-radius: 0.4rem;
     overflow: hidden;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.2s;
-    margin: 3rem;
+    margin: 3rem; /*margin = space outside of box */
 }
 
 .grid-item:hover {
@@ -159,7 +167,7 @@ a.active,a:hover{
     display: block;
     width: 100%;
     height: 20rem;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .card-content {
@@ -211,14 +219,15 @@ a.active,a:hover{
 }
 /* end card (homepage)*/
 
-.news {
+.news-main {
     display: grid;
     grid-template-columns: repeat (12, 1fr);
     grid-column-gap: 2rem;
     grid-template-areas:
         "nh nh nh nh nh nh nh nh nh nh nh nh"
-        "c c c c c c c c c c c c"
-        "c c c c c c c c c c c c";
+        "n1 n1 n1 n1 n2 n2 n2 n2 n3 n3 n3 n3"
+        "n4 n4 n4 n4 n5 n5 n5 n5 n6 n6 n6 n6"
+        "n7 n7 n7 n7 . . . . . . . .";
 }
 
 .news-heading {
@@ -226,14 +235,43 @@ a.active,a:hover{
     text-align: center;
 }
 
+.news-1 {
+    grid-area: n1;
+}
+
+.news-2 {
+    grid-area: n2;
+}
+
+.news-3 {
+    grid-area: n3;
+}
+
+.news-4 {
+    grid-area: n4;
+}
+
+.news-5 {
+    grid-area: n5;
+}
+
+.news-6 {
+    grid-area: n6;
+}
+
+.news-7 {
+    grid-area: n7;
+}
+
 .news-card {
-    grid-area: c;
     cursor: pointer;
     transition: 0.2s;
     margin: 3rem;
     border-radius: 5px;
     text-align: center;
     background-color: green;
+    width: 500px;
+    height: 450px;
 }
 
 .news-card:hover {
@@ -244,7 +282,7 @@ a.active,a:hover{
 
 /*start about us page */
 
-.about-us /*why can I never get this shit to work*/{
+.about-us-main /*why can I never get this shit to work*/ {
     display: grid;
     grid-template-columns: repeat (12, 1fr);
     grid-column-gap: 2rem;
@@ -252,7 +290,14 @@ a.active,a:hover{
         "ab ab ab ab ab ab ab ab ab ab ab ab"
         ". . . ai ai ai ai ai ai . . ."
         ". . . ot ot ot ot ot ot . . ."
-        "p p p p p p p p p p p p";
+        ". . . p1 p1 p1 p1 p1 p1 . . ."
+        ". . . p2 p2 p2 p2 p2 p2 . . ."
+        ". . . p3 p3 p3 p3 p3 p3 . . ."
+        ". . . p4 p4 p4 p4 p4 p4 . . ."
+        ". . . p5 p5 p5 p5 p5 p5 . . ."
+        ". . . p6 p6 p6 p6 p6 p6 . . ."
+        ". . . p7 p7 p7 p7 p7 p7 . . ."
+        ". . . p8 p8 p8 p8 p8 p8 . . .";
 }
 
 .about-banner {
@@ -267,19 +312,60 @@ a.active,a:hover{
     grid-area: ot;
 }
 
+.peep-1 {
+    grid-area: p1;
+}
+
+.peep-2 {
+    grid-area: p2;
+}
+
+.peep-3 {
+    grid-area: p3;
+}
+
+.peep-4 {
+    grid-area: p4;
+}
+
+.peep-5 {
+    grid-area: p5;
+}
+
+.peep-6 {
+    grid-area: p6;
+}
+
+.peep-7 {
+    grid-area: p7;
+}
+
+.peep-8 {
+    grid-area: p8;
+}
+
 .peeps-card {
-    grid-area: p;
-    grid-area: p;
     cursor: pointer;
     transition: 0.2s;
     margin: 3rem;
     border-radius: 5px;
     text-align: center;
     background-color: green;
+    width: 1500px;
+    height: 600px;
+}
+
+.peeps-img {
+    padding-right: 750px;
 }
 
 .peeps-card:hover {
     background-color:aquamarine;
+}
+
+.peeps-content {
+    padding: 3rem;
+    padding-left: 750px;
 }
 
 /* footer start */
@@ -360,11 +446,11 @@ a.active,a:hover{
     }
 }
 
-@media (max-width: 60em) /*this is the second breakpoint for the header*/ {
+/* @media (max-width: 60em) {
 
     .grid {
         grid-gap: 3rem;
         margin: 3rem;
     }
-}
+} */
 
