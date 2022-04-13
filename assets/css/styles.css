@@ -6,6 +6,8 @@
 }
 
 .wrapper {
+    background-color: #F9F6EF; 
+
     display: grid;
 
     height: 100vh;
@@ -34,6 +36,14 @@
     grid-area: m;
 }
 
+.main h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.main p {
+    font-family: 'Quattrocento', serif;
+}
+
 .footer-a {
     grid-area: fa;
 }
@@ -42,19 +52,15 @@
     grid-area: fb;
 }
 
-body{
-    font-family:'Courier New', Courier, monospace
-    /*temp font. Add Google font later*/
-}
-
-
 /*nav bar css*/
 
 nav{
-    background-color: bisque;
+    background-color: #BFAFA0;
+    color:#664A32;
     height: 80px;
     width: 100%;
     /*size of the nav bar*/
+    font-family: 'Quattrocento', serif;
 }
 
 .logo-hover, .logo-hover a:hover {
@@ -88,7 +94,8 @@ nav ul li a{
 }
 
 a.active,a:hover{
-    background-color: pink;
+    background-color: #664A32;
+    color: #F9F6EF;
     transition: .5s;
 }
 
@@ -379,13 +386,16 @@ a.active,a:hover{
 }
 
 .footer-col h4{
+    font-family: 'Oswald', sans-serif;
     font-size: 18px;
-    color: purple;
+    color: #664A32;
     margin-bottom: 15px;
     font-weight: 500;
 }
 
 .footer-col p {
+    font-family: 'Quattrocento', serif;
+    color: #000
     margin-bottom: 15px;
 }
 
@@ -393,7 +403,8 @@ a.active,a:hover{
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: palegreen;
+    background-color: #BFAFA0;
+    color: #664A32;
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
@@ -401,8 +412,8 @@ a.active,a:hover{
 }
 
 .footer-col .social-links a:hover {
-    color: pink;
-    background-color: blue;
+    color: #BFAFA0;
+    background-color: #664A32;
 }
 
 /*footer end */
