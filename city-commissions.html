@@ -14,11 +14,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Quattrocento&display=swap" rel="stylesheet">
-
+        
     </head>
 
     <body>
-        <div class = "wrapper">
+        <div class= "wrapper">
             <header class="header">
                 <!--this stuff is the navbar-->
                 <nav>
@@ -26,7 +26,9 @@
                     <label for="check" class="checkbtn">
                         <i class="fa fa-bars"></i> <!--this be thy hamburger icon-->
                     </label>
-                    <a href="index.html"> <img src="assets/images/artbiennial.png" alt="Canberra Art Biennial logo" width="400" height="auto" class="logo"></a> <!--this is the logo!-->
+                        <div class="logo-hover"> 
+                                <a href="index.html"> <img src="assets/images/artbiennial.png" alt="Canberra Art Biennial logo" width="400" height="auto" class="logo"></a> <!--this is the logo!-->
+                        </div>
                     <ul>
                         <li> <a href="festivals.html">Festivals</a></li>
                         <li> <a href="covid19.html">Covid-19</a></li>
@@ -37,9 +39,25 @@
                 </nav>
             </header>
 
-            <div class="main">
+            <div class="main" role="main">
                 <!--this is where the content goes-->
-                <p>this is festivals</p>
+                <div class="city-commissions-main">  
+                    <div class=ccimage>
+                        <img src="assets/images/citycommissions.png" width="600" height="auto">
+                    </div>
+                    <div class="cccontent">
+                        <h1>contour 556 congratulates the selected artists for the Creative Recovery and Resilience Program in association with artsACT.</h1>
+                            <h4>Alison Alder</h4>
+                                <p>Alison will work with Hands On Studio artsts. the project will raise awareness about the effects of social isolation and extra difficulties. 
+                                    The project will create 3 text based prints and banners 8 x 2m with live spoken performances by eight artists.</p>
+                            <h4>Michael Sollis</h4>
+                                <p>Michael will weave together interviews from immunocompromised families with music inspired by the increasing isolation of the stars.
+                                 Working with Capital Region Cancer Relief. Michael will produce an object that will play interviews and sound.</p>
+                            <h4>Sammy Hawker</h4>
+                                <p>Sammy will work with participants from Headspace Canberra. She will take portraits, then the subjects will manipulate the negative to add elements of their lockdown lives. 
+                                    The portraits will be displayed at multiple venues around Canberra.</p>
+                    </div>
+                </div>  
             </div>
 
             <footer class="footer-a">
@@ -64,5 +82,4 @@
             </footer>
         </div>
     </body>
-
 </html>
