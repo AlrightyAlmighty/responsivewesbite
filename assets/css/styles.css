@@ -60,7 +60,7 @@
 nav{
     background-color: #BFAFA0;
     color:#664A32;
-    height: 80px;
+    height: 5em;
     width: 100%;
     /*size of the nav bar*/
     font-family: 'Quattrocento', serif;
@@ -73,19 +73,19 @@ nav{
 
 .logo /*image*/{
     max-width: 100%; /* % means it doesn't think it's px */
-    padding: 15px 15px;
+    padding: 0.938em 0.983em;
 }
 
 nav ul{
     float: right;
-    margin-right: 20px;
+    margin-right: 1.925em;
     /*pushes nav list to the side */
 }
 
 nav ul li{
     display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+    line-height: 5em;
+    margin-right: 3em;
     /*makes nav list horizontal instead of vertical*/
 }
 
@@ -128,7 +128,9 @@ a.active,a:hover{
         "mi mi mi mi mi mi mi mi mi mi mi mi"
         "it it it it it it it it it it it it"
         "wh wh wh wh wh wh wh wh wh wh wh wh"
-        "c1 c1 c1 c1 c1 c1 c2 c2 c2 c2 c2 c2";
+        "c1 c1 c1 c1 c1 c1 c2 c2 c2 c2 c2 c2"
+        "st st st st st st st st st st st st"
+        "sl sl sl sl sl sl sl sl sl sl sl sl";
 }
 
 .main-image {
@@ -159,6 +161,36 @@ a.active,a:hover{
     text-align: center;
     font-size: 1em;
 }
+
+/*gridding is completely off.. can't figure out what's going on 
+.locations-text{
+    grid-area: lt;
+    margin: 0.2em 20em 0.5em 20em;
+}
+
+.locations-text h1{
+    font-size: 2.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+
+.location-1 {
+    grid-area: l1;
+}
+
+.location-2 {
+    grid-area: l2;
+}
+
+.location-3 {
+    grid-area: l3;
+}
+
+.location-4 {
+    grid-area: l4;
+}
+*/
 
 .whats-happening {
     grid-area: wh;
@@ -222,6 +254,16 @@ a.active,a:hover{
 .card-btn:hover span, .card-btn:active span {
     margin-left: 1.5rem;
 }
+
+/*can't get this to work either... something is majorly wrong with the gridding
+.sponsers-text {
+    grid-area: st;
+}
+
+.sponsers-logos {
+    grid-area: sl;
+}
+*/
 
 /* end Index page */
 
@@ -438,20 +480,29 @@ a.active,a:hover{
     grid-area: n7;
 }
 
-.news-content {
-    font-size: 2.5em;
+.news-content h4 {
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.5em;
+    margin: 0.2em 0.2em 0em 0.2em;
+}
+
+.news-content p {
+    font-size: 1em;
+    font-family: 'Quattrocento', serif;
+    line-height: 1.5em;
 }
 
 .news-card {
     cursor: pointer;
     transition: 0.2s;
-    margin: 3rem;
-    border-radius: 5px;
+    margin: 3em;
+    border-radius: 0.313em;
     text-align: center;
     color: #664A32;
     background-color: #BFAFA0;
-    width: 500px;
-    height: 450px;
+    width: 31.250em;
+    height: 28.125em;
 }
 
 .news-card:hover {
@@ -470,16 +521,12 @@ a.active,a:hover{
     grid-column-gap: 2rem;
     grid-template-areas:
         "ab ab ab ab ab ab ab ab ab ab ab ab"
-        ". . . ai ai ai ai ai ai . . ."
-        ". . . ot ot ot ot ot ot . . ."
-        ". . . p1 p1 p1 p1 p1 p1 . . ."
-        ". . . p2 p2 p2 p2 p2 p2 . . ."
-        ". . . p3 p3 p3 p3 p3 p3 . . ."
-        ". . . p4 p4 p4 p4 p4 p4 . . ."
-        ". . . p5 p5 p5 p5 p5 p5 . . ."
-        ". . . p6 p6 p6 p6 p6 p6 . . ."
-        ". . . p7 p7 p7 p7 p7 p7 . . ."
-        ". . . p8 p8 p8 p8 p8 p8 . . .";
+        "ai ai ai ai ai ai ai ai ai ai ai ai"
+        "ot ot ot ot ot ot ot ot ot ot ot ot"
+        "p1 p1 p1 p1 p1 p1 p2 p2 p2 p2 p2 p2"
+        "p3 p3 p3 p3 p3 p3 p4 p4 p4 p4 p4 p4"
+        "p5 p5 p5 p5 p5 p5 p6 p6 p6 p6 p6 p6"
+        "p7 p7 p7 p7 p7 p7 p8 p8 p8 p8 p8 p8";
 }
 
 .about-banner {
@@ -488,67 +535,94 @@ a.active,a:hover{
 
 .about-info {
     grid-area: ai;
+    margin: 0.2em 20em 0.5em 20em;
+    text-align: center;
+    line-height: 2.5em;
+}
+
+.about-info h1{
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .our-team {
     grid-area: ot;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1em;
 }
 
 .peep-1 {
     grid-area: p1;
+    margin: 2em 2.5em 10em 10em;
 }
 
 .peep-2 {
     grid-area: p2;
+    margin: 2em 10em 10em 2.5em;
 }
 
 .peep-3 {
     grid-area: p3;
+    margin: 2em 2.5em 10em 10em;
 }
 
 .peep-4 {
     grid-area: p4;
+    margin: 2em 10em 10em 2.5em;
 }
 
 .peep-5 {
     grid-area: p5;
+    margin: 2em 2.5em 10em 10em;
 }
 
 .peep-6 {
     grid-area: p6;
+    margin: 2em 10em 10em 2.5em;
 }
 
 .peep-7 {
     grid-area: p7;
+    margin: 2em 2.5em 10em 10em;
 }
 
 .peep-8 {
     grid-area: p8;
+    margin: 2em 10em 10em 2.5em;
+}
+
+.peeps-img {
+    text-align: center;
+    padding: 1em;
 }
 
 .peeps-card {
     cursor: pointer;
     transition: 0.2s;
-    margin: 3rem;
-    border-radius: 5px;
+    margin: 3em;
+    border-radius: 0.313em;
+    border: solid #664A32;
+    width: 40em;
+    height: 60em;
+}
+
+.peeps-card h4 {
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.5em;
+    margin: 0.2em 0.2em 0em 0.2em;
     text-align: center;
-    background-color: green;
-    width: 1500px;
-    height: 600px;
 }
 
-.peeps-img {
-    padding-right: 750px;
+.peeps-card p {
+    font-size: 1em;
+    font-family: 'Quattrocento', serif;
+    line-height: 1.5em;
+    padding: 1em;
 }
 
-.peeps-card:hover {
-    background-color:aquamarine;
-}
-
-.peeps-content {
-    padding: 3rem;
-    padding-left: 750px;
-}
 /*About Us end */
 
 /* City Commissions start*/
