@@ -34,6 +34,7 @@
 
 .main {
     grid-area: m;
+    background-color:#F9F6EF;
 }
 
 .main h1 {
@@ -46,10 +47,12 @@
 
 .footer-a {
     grid-area: fa;
+    background-color:#F9F6EF;
 }
 
 .footer-b {
     grid-area: fb;
+    background-color:#F9F6EF;
 }
 
 /*nav bar css*/
@@ -112,7 +115,7 @@ a.active,a:hover{
     display: none;
 }
 
-/*main content*/
+/*Index page start*/
 
 .index-main {
     background-color: #F9F6EF;
@@ -131,6 +134,7 @@ a.active,a:hover{
 .main-image {
    grid-area: mi;
    display: inline;
+   margin-bottom: 2.5em;
 }
 
 .intro-text {
@@ -219,7 +223,173 @@ a.active,a:hover{
     margin-left: 1.5rem;
 }
 
-/*end main content*/
+/* end Index page */
+
+
+/* start Festivals 2022 page */
+
+    /* footer is wack on this page >:/ no idea why but need to work out */
+
+.festivals-2022-main {
+    background-color: #F9F6EF; 
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    grid-column-gap: 2rem;
+    grid-template-areas:
+        "i22 i22 i22 i22 i22 i22 d22 d22 d22 d22 d22 d22"
+        "t22 t22 t22 t22 t22 t22 t22 t22 t22 t22 t22 t22";
+}
+
+.img-2022 {
+    grid-area: i22;
+    margin: 7.5em 5em 7em 10em;
+}
+
+.description-2022 {
+    grid-area: d22;
+    margin: 5em 10em 5em 5em;
+}
+
+.description-2022 h1 {
+    font-size: 2.5em;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.description-2022 h4 {
+    font-family: 'Quattrocento', serif;
+    font-size: 1.5em;
+    line-height: 0.5em;
+    text-align: center;
+}
+
+.description-2022 h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    margin-top: 1em;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+.description-2022 p {
+    line-height: 1.5em;
+    font-size: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.thanks-2022 {
+    grid-area: t22;
+}
+
+.thanks-2022 p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0.75em 20em 0.75em 20em;
+}
+
+.thanks-2022 h4 {
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.5em;
+    margin: 2.5em 20em 2.5em 20em;
+}
+
+/* end Fesitvals 2022 page */
+
+/* start COVID-19 page */
+
+.covid-main {
+    background-color: #F9F6EF; 
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    grid-column-gap: 2rem;
+    grid-template-areas:
+        "i1 i1 i1 i1 i2 i2 i2 i2 i3 i3 i3 i3"
+        "cc cc cc cc cc cc cc cc cc cc cc cc";
+}
+
+.covid-img-1 {
+    /* margin = top right bottom left */
+    grid-area: i1;
+    width: 30em;
+    margin: 2.5em 2.5em 2.5em 5em;
+}
+
+.covid-img-1 img {
+    width: 100%;
+    height: auto;
+}
+
+.covid-img-2 {
+    grid-area: i2;
+    width: 30em;
+    margin: 2.5em 2.5em 2.5em 2.5em;
+}
+
+.covid-img-2 img {
+    width: 100%;
+    height: auto;
+}
+
+.covid-img-3 {
+    grid-area: i3;
+    width: 30em;
+    margin: 2.5em 5em 2.5em 2.5em;
+}
+
+.covid-img-3 img {
+    width: 100%;
+    height: auto;
+}
+
+.covid-content {
+    grid-area: cc;
+    margin: 0.2em 20em 0.5em 20em;
+}
+
+.covid-content h1 {
+    font-size: 2.5em;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.covid-content h4 {
+    font-family: 'Quattrocento', serif;
+    font-size: 1.5em;
+    line-height: 0.5em;
+    text-align: center;
+}
+
+.covid-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    margin-top: 1em;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+.covid-content p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.covid-content ul {
+    font-size: 1em;
+    font-family: 'Quattrocento', serif;
+    line-height: 1.5em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+/* end COVID-19 page */
+
+
+/* start News page */
 
 .news-main {
     background-color: #F9F6EF; 
@@ -278,18 +448,20 @@ a.active,a:hover{
     margin: 3rem;
     border-radius: 5px;
     text-align: center;
-    background-color: green;
+    color: #664A32;
+    background-color: #BFAFA0;
     width: 500px;
     height: 450px;
 }
 
 .news-card:hover {
-    background-color: purple;
+    color: #BFAFA0;
+    background-color: #664A32;
 }
 
 /*end news page*/
 
-/*start about us page */
+/*start About Us page */
 
 .about-us-main{
     background-color: #F9F6EF; 
@@ -392,7 +564,7 @@ a.active,a:hover{
 
 .ccimage {
     grid-area: cci;
-    margin: 5em 5em 5em 10em;
+    margin: 7.5em 5em 5em 10em;
 }
 
 .cccontent {
@@ -402,14 +574,21 @@ a.active,a:hover{
 
 .cccontent h1 {
     font-size: 2.5em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
 }
 
 .cccontent h4 {
     font-family: 'Oswald', sans-serif;
-    
+    font-size: 1.5em;
+    margin-top: 1em;
+    line-height: 2.5em;
 }
 
-/* START HERE TOMORROW - EDIT WRITING */
+.cccontent p {
+    line-height: 1.5em;
+    font-size: 1em;
+}
 
 /*City Comissions end*/
 
