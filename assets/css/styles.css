@@ -11,20 +11,14 @@ body {
 
 .wrapper {
     background-color: #F9F6EF; 
-
     display: grid;
-
     height: 100vh;
-
     /*define column count btw this is a comment*/
     grid-template-columns: repeat (12, 1fr);
-
     /* define rows */
     grid-template-rows: auto 1fr auto;
-
     /*define column gap */
     grid-column-gap: 2rem;
-
     grid-template-areas:
     /* fullstops mean empty columns - no content */
         "h h h h h h h h h h h h"
@@ -57,6 +51,11 @@ body {
 .footer-b {
     grid-area: fb;
     background-color:#F9F6EF;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #664A32;
 }
 
 /*nav bar css*/
@@ -331,8 +330,6 @@ a.active,a:hover{
 
 /* start Festivals 2022 page */
 
-    /* footer is wack on this page >:/ no idea why but need to work out */
-
 .festivals-2022-main {
     background-color: #F9F6EF; 
     display: grid;
@@ -579,6 +576,7 @@ a.active,a:hover{
 
 /*end news page*/
 
+
 /*start About Us page */
 
 .about-us-main{
@@ -711,7 +709,7 @@ a.active,a:hover{
 }
 
 .text-block {
-    background-image: url('../../assets/images/paper-armada.jpg');
+    background-image: url('../../assets/images/paper-armada.jpg'); /*shows up in menu?*/
     opacity: 50%;
     color: white;
     text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
@@ -860,6 +858,7 @@ a.active,a:hover{
 
 /*City Comissions end*/
 
+
 /* footer start */
 
 .container{
@@ -908,13 +907,9 @@ a.active,a:hover{
 
 /*responsive elements below*/
 
-@media (min-width: 59.5em) /*double check breakpoint ALSO ask about adding shit. do I need to make a new thing for everything or can I umbrella it*/ {
-    nav ul li a{
-        font-size: 1em;
-    }
-}
 
 @media (max-width: 83.125em) /*this is the first breakpoint - also need to covert to em not px*/ {
+    
     .checkbtn{
         display: block;
     }
@@ -923,8 +918,9 @@ a.active,a:hover{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color:burlywood;
-        top: 80px;
+        background-color: #664A32;
+        color: #BFAFA0;
+        top: 5em;
         left: -100%;
         text-align: center;
         transition: all .5s;
@@ -932,45 +928,37 @@ a.active,a:hover{
 
     nav ul li{
         display: block; /*make list go from horizontal to vertical at breakpoint*/
-        margin: 50px 0;
-        line-height: 30px;
+        margin: 3.125em 0;
+        line-height: 1.875em;
     }
 
     nav ul li a{
-        font-size: 20px;
-    }
-
-    a.active,a:hover{
-        background: none;
-        color: greenyellow;
+        font-size: 2.5em;
+        line-height: 1.5em;
+        font-family: 'Oswald', sans-serif;
     }
 
     #check:checked ~ ul{
         left: 0;
     }
 
-    .wrapper {
+    .text-block {
+        background-image: none;
+    }
+
+    .wrapper { 
+        margin: 0 auto;
         background-color: #F9F6EF; 
-    
         display: grid;
-    
         height: 100vh;
-    
-        /*define column count btw this is a comment*/
-        grid-template-columns: repeat (12, 1fr);
-    
-        /* define rows */
+        grid-template-columns: repeat (6, 1fr);
         grid-template-rows: auto 1fr auto;
-    
-        /*define column gap */
         grid-column-gap: 2rem;
-    
         grid-template-areas:
-        /* fullstops mean empty columns - no content */
-            "h h h h h h h h h h h h"
-            "m m m m m m m m m m m m"
-            "fa fa fa fa fa fa fa fa fa fa fa fa"
-            "fb fb fb fb fb fb fb fb fb fb fb fb";
+            "h h h h h h"
+            "m m m m m m"
+            "fa fa fa fa fa fa"
+            "fb fb fb fb fb fb";
     }
 
     .footer-a {
@@ -985,6 +973,13 @@ a.active,a:hover{
         text-align: center;
     }
 
+    a:visited {
+        text-decoration: none;
+        color: #BFAFA0;
+    }
+
+    /*index page start */
+
     .index-main {
         background-color: #F9F6EF;
         display: grid;
@@ -996,18 +991,13 @@ a.active,a:hover{
             "mi mi mi mi mi mi"
             "it it it it it it "
             "lt lt lt lt lt lt "
-            "l1 l1 l1 l1 l1 l1"
-            "l2 l2 l2 l2 l2 l2"
-            "l3 l3 l3 l3 l3 l3"
-            "l4 l4 l4 l4 l4 l4"
+            "l1 l1 l1 l2 l2 l2"
+            "l3 l3 l3 l4 l4 l4"
             "wh wh wh wh wh wh"
-            "c1 c1 c1 c1 c1 c1"
-            "c2 c2 c2 c2 c2 c2"
+            "c1 c1 c1 c2 c2 c2"
             "st st st st st st"
-            "s1 s1 s1 s1 s1 s1" 
-            "s2 s2 s2 s2 s2 s2"
-            "s3 s3 s3 s3 s3 s3" 
-            "s4 s4 s4 s4 s4 s4";
+            "s1 s1 s1 s2 s2 s2" 
+            "s3 s3 s3 s4 s4 s4";
     }
 
     .intro-text {
@@ -1024,41 +1014,46 @@ a.active,a:hover{
     .location-1 {
         grid-area: l1;
         display: inline;
-        margin: 2em 5em 2em 5em;
+        margin: 2em 1em 2em 5em;
         place-items: center;
     }
     
     .location-2 {
         grid-area: l2;
         display: inline;
-        margin: 2em 5em 2em 5em;
+        margin: 2em 5em 2em 1em;
         place-items: center;
     }
     
     .location-3 {
         grid-area: l3;
         display: inline;
-        margin: 2em 5em 2em 5em;
+        margin: 2em 1em 2em 5em;
         place-items: center;
     }
     
     .location-4 {
         grid-area: l4;
         display: inline;
-        margin: 2em 5em 2em 5em;
+        margin: 2em 5em 2em 1em;
         place-items: center;
     }
 
     .index-card-1 {
         grid-area: c1;
-        margin: 2em 5em 10em 5em;
+        margin: 2em 1em 5em 5em;
         max-width: 40em;
     }
     
     .index-card-2 {
         grid-area: c2;
-        margin: 2em 5em 10em 5em;
+        margin: 2em 5em 5em 1em;
         max-width: 40em;
+    }
+
+    .card-btn {
+        color: #BFAFA0;
+        background-color: #664A32;
     }
 
     .sponser-text {
@@ -1072,7 +1067,6 @@ a.active,a:hover{
         grid-area: s1;
         display: grid;
         place-items: center;
-        max-width: 18.75em;
     }
     
     .sponser-2 {
@@ -1080,8 +1074,7 @@ a.active,a:hover{
         text-align: center;
         display: grid;
         place-items: center;
-        place-items: center;
-        max-width: 18.75em;
+        margin-right: 10em;
     }
     
     .sponser-3 {
@@ -1089,7 +1082,7 @@ a.active,a:hover{
         text-align: center;
         display: grid;
         place-items: center;
-        max-width: 18.75em;
+        margin-left: 10em;
     }
     
     .sponser-4 {
@@ -1097,6 +1090,378 @@ a.active,a:hover{
         text-align: center;
         display: grid;
         place-items: center;
-        max-width: 18.75em;
     }
+
+    /* index page end */
+
+
+    /* festivals page start */
+    
+    .festivals-2022-main {
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "i22 i22 i22 i22 i22 i22"
+            "d22 d22 d22 d22 d22 d22"
+            "t22 t22 t22 t22 t22 t22";
+    }
+
+    .img-2022 {
+        grid-area: i22;
+        margin: 2.5em 5em 2.5em 5em;
+        max-width: 31.25em;
+    }
+    
+    .description-2022 {
+        grid-area: d22;
+        margin: 0.2em 5em 0.5em 5em;
+    }
+    
+    .thanks-2022 {
+        grid-area: t22;
+    }
+    
+    .thanks-2022 p {
+        font-size: 1em;
+        line-height: 1.5em;
+        margin: 0.5em 5em 0.5em 5em;
+    }
+    
+    .thanks-2022 h4 {
+        font-size: 1em;
+        font-family: 'Oswald', sans-serif;
+        line-height: 1.5em;
+        margin: 0.2em 5em 2.5em 5em;
+    }
+
+    /* festivals page end */
+
+
+    /* covid-19 page start */
+    .covid-main {
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "i1 i1 i2 i2 i3 i3"
+            "cc cc cc cc cc cc";
+    }
+    
+    .covid-img-1 {
+        grid-area: i1;
+        max-width: 30em;
+        margin: 1em 1em 1em 1.5em;
+    }
+    
+    .covid-img-2 {
+        grid-area: i2;
+        max-width: 30em;
+        margin: 1em 1em 1em 1em;
+    }
+    
+    .covid-img-3 {
+        grid-area: i3;
+        max-width: 30em;
+        margin: 1em 1.5em 1em 1em;
+    }
+    
+    .covid-content {
+        grid-area: cc;
+        margin: 0.2em 5em 2.5em 5em;
+    }
+
+    /* covid-19 page start */
+
+
+    /* news page start */
+
+    .news-main {
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "nh nh nh nh nh nh"
+            "n1 n1 n1 n2 n2 n2" 
+            "n3 n3 n3 n4 n4 n4"
+            "n5 n5 n5 n6 n6 n6"
+            "n7 n7 n7 . . .";
+    }
+
+    /* news page end */
+
+
+    /* about us page start*/
+    
+    .about-us-main{
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "ab ab ab ab ab ab"
+            "ai ai ai ai ai ai"
+            "ot ot ot ot ot ot"
+            "p1 p1 p1 p1 p1 p1"
+            "p2 p2 p2 p2 p2 p2"
+            "p3 p3 p3 p3 p3 p3"
+            "p4 p4 p4 p4 p4 p4"
+            "p5 p5 p5 p5 p5 p5"
+            "p6 p6 p6 p6 p6 p6"
+            "p7 p7 p7 p7 p7 p7"
+            "p8 p8 p8 p8 p8 p8";
+    }
+
+    .about-info {
+        grid-area: ai;
+        margin: 0.2em 5em 0.5em 5em;
+        text-align: center;
+        line-height: 2.5em;
+    }
+    
+    .news-card {
+        max-width: 40em;
+        max-height: 35em;
+    }
+
+    /* about us page end */
+
+
+    /* supporters page start */
+    
+    .supporters-main {
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "ty ty ty ty ty ty"
+            "tym tym tym tym tym tym";
+    }  
+    
+    /* supporters page end */
+
+
+    /* city commissions start */
+    .city-commissions-main {
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "cci cci cci cci cci cci" 
+            "ccc ccc ccc ccc ccc ccc";
+    }
+    
+    .ccimage {
+        grid-area: cci;
+        margin: 7.5em 5em 5em 10em;
+        max-width: 37.5em;
+    }
+    
+    .cccontent {
+        grid-area: ccc;
+        margin: 0.2em 5em 0.5em 5em;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    
+    /* city commissions end */
+
+}
+
+@media (max-width: 70.5625em) {
+
+    .news-main {
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "nh nh nh"
+            "n1 n1 n1" 
+            "n2 n2 n2" 
+            "n3 n3 n3" 
+            "n4 n4 n4"
+            "n5 n5 n5"
+            "n6 n6 n6"
+            "n7 n7 n7";
+    }
+
+    .news-card {
+        display: grid;
+        place-items: center;
+        max-width: 31.250em;
+    }
+} 
+
+@media (max-width: 61.875em) {
+    /*index*/
+    .index-main {
+        background-color: #F9F6EF;
+        display: grid;
+        /*define column count btw this is a comment*/
+        grid-template-columns: repeat (2, 1fr);
+        /*define column gap */
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "mi mi"
+            "it it"
+            "lt lt"
+            "l1 l1"
+            "l2 l2"
+            "l3 l3"
+            "l4 l4"
+            "wh wh"
+            "c1 c1"
+            "c2 c2"
+            "st st"
+            "s1 s1"
+            "s2 s2" 
+            "s3 s3"
+            "s4 s4";
+    }
+
+    .intro-text {
+        grid-area: it;
+        line-height: 2.5em;
+    }   
+
+    .location-1 {
+        grid-area: l1;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+    
+    .location-2 {
+        grid-area: l2;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+    
+    .location-3 {
+        grid-area: l3;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+    
+    .location-4 {
+        grid-area: l4;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    .index-card-1 {
+        grid-area: c1;
+        max-width: 40em;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+    
+    .index-card-2 {
+        grid-area: c2;
+        max-width: 40em;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    .sponser-text {
+        grid-area: st;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .sponser-1 {
+        grid-area: s1;
+        display: grid;
+        place-items: center;
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+    
+    .sponser-2 {
+        grid-area: s2;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+    
+    .sponser-3 {
+        grid-area: s3;
+        text-align: center;
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+    
+    .sponser-4 {
+        grid-area: s4;
+        text-align: center;
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+    /*index*/
+}
+
+@media (max-width: 54.375em) {
+    /*supporters*/
+    .supporters-main {
+        background-color: #F9F6EF; 
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "ty ty ty"
+            "tym tym tym";
+    }  
+
+    .text-block {
+    /*supporters*/
+        background-image: url('../../assets/images/paper-armada.jpg'); /*shows up in menu?*/
+        opacity: 50%;
+        color: white;
+        text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+        padding: 0.75em 1.25em 0.75em 1.25em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 5em;
+    }
+    /*supporters*/
+}
+
+@media (max-width: 37.5em) {
+    /* index */
+    .logo{
+        max-width: 60%;
+        /*need to find a way to stop logo from rising */
+
+    }
+    /*index*/
+    
+    /*supporters*/
+    .text-block {
+        background-image: url('../../assets/images/paper-armada.jpg'); /*shows up in menu?*/
+        opacity: 50%;
+        color: white;
+        text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+        padding: 0.75em 1.25em 0.75em 1.25em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 3em;
+    } 
+
+    .supporters-2022 {
+        margin-bottom: -2em;
+    }
+
+    .thank-you-message {
+        margin-left: -1.5em;
+        margin-right: -1.5em;
+    }
+
+    /*supporters*/
 }
