@@ -5,6 +5,10 @@
     /*page reset*/
 }
 
+body {
+    background-color: #F9F6EF;
+}
+
 .wrapper {
     background-color: #F9F6EF; 
 
@@ -25,7 +29,7 @@
     /* fullstops mean empty columns - no content */
         "h h h h h h h h h h h h"
         "m m m m m m m m m m m m"
-        "fa fa fa fa fa fa fb fb fb fb fb fb";
+        "fa fa fa fa fa fa fa fa fb fb fb fb";
 }
 
 .header {
@@ -127,10 +131,13 @@ a.active,a:hover{
     grid-template-areas:
         "mi mi mi mi mi mi mi mi mi mi mi mi"
         "it it it it it it it it it it it it"
+        "lt lt lt lt lt lt lt lt lt lt lt lt"
+        "l1 l1 l1 l1 l1 l1 l2 l2 l2 l2 l2 l2"
+        "l3 l3 l3 l3 l3 l3 l4 l4 l4 l4 l4 l4"
         "wh wh wh wh wh wh wh wh wh wh wh wh"
         "c1 c1 c1 c1 c1 c1 c2 c2 c2 c2 c2 c2"
         "st st st st st st st st st st st st"
-        "sl sl sl sl sl sl sl sl sl sl sl sl";
+        "s1 s1 s1 s2 s2 s2 s3 s3 s3 s4 s4 s4";
 }
 
 .main-image {
@@ -162,7 +169,7 @@ a.active,a:hover{
     font-size: 1em;
 }
 
-/*gridding is completely off.. can't figure out what's going on 
+/*gridding is completely off.. can't figure out what's going on */
 .locations-text{
     grid-area: lt;
     margin: 0.2em 20em 0.5em 20em;
@@ -170,47 +177,59 @@ a.active,a:hover{
 
 .locations-text h1{
     font-size: 2.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.2em;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
     text-align: center;
 }
 
+
 .location-1 {
     grid-area: l1;
+    display: grid;
+    margin: 2.5em 2em 2.5em 20em;
+    max-width: 37.5em;
 }
 
 .location-2 {
     grid-area: l2;
+    display: grid;
+    margin: 2.5em 20em 2.5em 2em;
+    max-width: 37.5em;
 }
 
 .location-3 {
     grid-area: l3;
+    display: grid;
+    margin: 2.5em 2em 2.5em 20em;
+    max-width: 37.5em;
 }
 
 .location-4 {
     grid-area: l4;
+    display: grid;
+    margin: 2.5em 20em 2.5em 2em;
+    max-width: 37.5em;
 }
-*/
 
 .whats-happening {
     grid-area: wh;
     text-align: center;
     font-size: 2.5em;
-    margin-top: 1.5em;
-    margin-bottom: 0.2em;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
     text-align: center;
 }
 
 .index-card-1 {
     grid-area: c1;
-    margin: 2em 2.5em 10em 10em;
-    width: 40em;
+    margin: 2em 2.5em 10em 15em;
+    max-width: 40em;
 }
 
 .index-card-2 {
     grid-area: c2;
-    margin: 2em 10em 10em 2.5em;
-    width: 40em;
+    margin: 2em 15em 10em 2.5em;
+    max-width: 40em;
 }
 
 .index-card-content h1 {
@@ -255,15 +274,57 @@ a.active,a:hover{
     margin-left: 1.5rem;
 }
 
-/*can't get this to work either... something is majorly wrong with the gridding
-.sponsers-text {
+/* can't get this to work either... something is majorly wrong with the gridding */
+.sponser-text {
     grid-area: st;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
 }
 
-.sponsers-logos {
-    grid-area: sl;
+.sponser-1 {
+    grid-area: s1;
+    margin: 0em 1em 2.5em 10em;
+    max-width: 18.75em;
 }
-*/
+
+.sponser-1, .sponser-1 a:hover {
+    background-color: transparent;
+}
+
+.sponser-2 {
+    grid-area: s2;
+    text-align: center;
+    margin: 0em 1em 2.5em 1em;
+    max-width: 18.75em;
+}
+
+.sponser-2, .sponser-2 a:hover {
+    background-color: transparent;
+}
+
+.sponser-3 {
+    grid-area: s3;
+    text-align: center;
+    margin: 0em 1em 2.5em 1em;
+    max-width: 18.75em;
+}
+
+.sponser-3, .sponser-3 a:hover {
+    background-color: transparent;
+}
+
+.sponser-4 {
+    grid-area: s4;
+    text-align: center;
+    margin: 0em 10em 2.5em 1em;
+    max-width: 18.75em;
+}
+
+.sponser-4, .sponser-4 a:hover {
+    background-color: transparent;
+}
 
 /* end Index page */
 
@@ -285,6 +346,7 @@ a.active,a:hover{
 .img-2022 {
     grid-area: i22;
     margin: 7.5em 5em 7em 10em;
+    max-width: 31.25em;
 }
 
 .description-2022 {
@@ -355,7 +417,7 @@ a.active,a:hover{
 .covid-img-1 {
     /* margin = top right bottom left */
     grid-area: i1;
-    width: 30em;
+    max-width: 30em;
     margin: 2.5em 2.5em 2.5em 5em;
 }
 
@@ -366,18 +428,18 @@ a.active,a:hover{
 
 .covid-img-2 {
     grid-area: i2;
-    width: 30em;
+    max-width: 30em;
     margin: 2.5em 2.5em 2.5em 2.5em;
 }
 
 .covid-img-2 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .covid-img-3 {
     grid-area: i3;
-    width: 30em;
+    max-width: 30em;
     margin: 2.5em 5em 2.5em 2.5em;
 }
 
@@ -426,6 +488,11 @@ a.active,a:hover{
     line-height: 1.5em;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
+}
+
+.covid-content li {
+    list-style: circle;
+    margin-left: 2.5em;
 }
 
 /* end COVID-19 page */
@@ -501,8 +568,8 @@ a.active,a:hover{
     text-align: center;
     color: #664A32;
     background-color: #BFAFA0;
-    width: 31.250em;
-    height: 28.125em;
+    max-width: 31.250em;
+    max-height: 28.125em;
 }
 
 .news-card:hover {
@@ -604,8 +671,7 @@ a.active,a:hover{
     margin: 3em;
     border-radius: 0.313em;
     border: solid #664A32;
-    width: 40em;
-    height: 60em;
+    max-width: 40em;
 }
 
 .peeps-card h4 {
@@ -625,6 +691,133 @@ a.active,a:hover{
 
 /*About Us end */
 
+
+/* Supporters start */
+
+.supporters-main {
+    background-color: #F9F6EF; 
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    grid-column-gap: 2rem;
+    grid-template-areas:
+        "ty ty ty ty ty ty ty ty ty ty ty ty"
+        "tym tym tym tym tym tym tym tym tym tym tym tym";
+}
+
+.thank-you {
+    grid-area: ty;
+    display: grid;
+    place-items: center; 
+}
+
+.text-block {
+    background-image: url('../../assets/images/paper-armada.jpg');
+    opacity: 50%;
+    color: white;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+    padding: 0.75em 1.25em 0.75em 1.25em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 7em;
+}
+
+.thank-you-message {
+    grid-area: tym;
+    background-color: #F9F6EF; 
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    grid-column-gap: 2rem;
+    grid-template-areas:
+        "s2022 s2022 s2022 s2022 s2022 s2022 s2022 s2022 s2022 s2022 s2022 s2022"
+        "d1 d1 d1 d1 d1 d1 d1 d1 d1 d1 d1 d1"
+        ". . . s10001 s10001 s10001 s10002 s10002 s10002 . . ."
+        "d2 d2 d2 d2 d2 d2 d2 d2 d2 d2 d2 d2"
+        ". . . s9991 s9991 s9991 s9992 s9992 s9992 . . ."
+        "d3 d3 d3 d3 d3 d3 d3 d3 d3 d3 d3 d3"
+        ". . . s4991 s4991 s4991 s4992 s4992 s4992 . . .";
+}
+
+.supporters-2022 {
+    grid-area: s2022;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+
+.donations-1 {
+    grid-area: d1;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    margin-top: 3em;
+    line-height: 2.5em;
+}
+
+.s-1000-1 {
+    grid-area: s10001;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1em;
+}
+
+.s-1000-2 {
+    grid-area: s10002;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1em;
+}
+
+.donations-2 {
+    grid-area: d2;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    margin-top: 3em;
+    line-height: 2.5em;
+}
+
+.s-999-1 {
+    grid-area: s9991;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1em;
+}
+
+.s-999-2 {
+    grid-area: s9992;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1em;
+}
+
+.donations-3 {
+    grid-area: d3;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    margin-top: 3em;
+    line-height: 2.5em;
+}
+
+.s-499-1 {
+    grid-area: s4991;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1em;
+    margin-bottom: 5em;
+}
+
+.s-499-2 {
+    grid-area: s4992;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1em;
+    margin-bottom: 5em;
+}
+
+/* Supporters end */
+
+
 /* City Commissions start*/
 
 .city-commissions-main {
@@ -639,6 +832,7 @@ a.active,a:hover{
 .ccimage {
     grid-area: cci;
     margin: 7.5em 5em 5em 10em;
+    max-width: 37.5em;
 }
 
 .cccontent {
@@ -694,13 +888,13 @@ a.active,a:hover{
 
 .footer-col .social-links a /*this affects the social media icons*/{ 
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 2.5em;
+    width: 2.5em;
     background-color: #BFAFA0;
     color: #664A32;
     margin: 0em 1em 1.5em 0em;
     text-align: center;
-    line-height: 40px;
+    line-height: 2.5em;
     border-radius: 50%; /*makes it a circle*/
 }
 
@@ -711,18 +905,20 @@ a.active,a:hover{
 
 /*footer end */
 
+
 /*responsive elements below*/
 
-@media (min-width: 952px) /*double check breakpoint ALSO ask about adding shit. do I need to make a new thing for everything or can I umbrella it*/ {
+@media (min-width: 59.5em) /*double check breakpoint ALSO ask about adding shit. do I need to make a new thing for everything or can I umbrella it*/ {
     nav ul li a{
-        font-size: 16px;
+        font-size: 1em;
     }
 }
 
-@media (max-width: 1002px) /*this is the first breakpoint - also need to covert to em not px*/ {
+@media (max-width: 83.125em) /*this is the first breakpoint - also need to covert to em not px*/ {
     .checkbtn{
         display: block;
     }
+
     ul{
         position: fixed;
         width: 100%;
@@ -733,28 +929,174 @@ a.active,a:hover{
         text-align: center;
         transition: all .5s;
     }
+
     nav ul li{
         display: block; /*make list go from horizontal to vertical at breakpoint*/
         margin: 50px 0;
         line-height: 30px;
     }
+
     nav ul li a{
         font-size: 20px;
     }
+
     a.active,a:hover{
         background: none;
         color: greenyellow;
     }
+
     #check:checked ~ ul{
         left: 0;
     }
-}
 
-/* @media (max-width: 60em) {
-
-    .grid {
-        grid-gap: 3rem;
-        margin: 3rem;
+    .wrapper {
+        background-color: #F9F6EF; 
+    
+        display: grid;
+    
+        height: 100vh;
+    
+        /*define column count btw this is a comment*/
+        grid-template-columns: repeat (12, 1fr);
+    
+        /* define rows */
+        grid-template-rows: auto 1fr auto;
+    
+        /*define column gap */
+        grid-column-gap: 2rem;
+    
+        grid-template-areas:
+        /* fullstops mean empty columns - no content */
+            "h h h h h h h h h h h h"
+            "m m m m m m m m m m m m"
+            "fa fa fa fa fa fa fa fa fa fa fa fa"
+            "fb fb fb fb fb fb fb fb fb fb fb fb";
     }
-} */
 
+    .footer-a {
+        grid-area: fa;
+        background-color:#F9F6EF;
+        text-align: center;
+    }
+    
+    .footer-b {
+        grid-area: fb;
+        background-color:#F9F6EF;
+        text-align: center;
+    }
+
+    .index-main {
+        background-color: #F9F6EF;
+        display: grid;
+        /*define column count btw this is a comment*/
+        grid-template-columns: repeat (6, 1fr);
+        /*define column gap */
+        grid-column-gap: 2rem;
+        grid-template-areas:
+            "mi mi mi mi mi mi"
+            "it it it it it it "
+            "lt lt lt lt lt lt "
+            "l1 l1 l1 l1 l1 l1"
+            "l2 l2 l2 l2 l2 l2"
+            "l3 l3 l3 l3 l3 l3"
+            "l4 l4 l4 l4 l4 l4"
+            "wh wh wh wh wh wh"
+            "c1 c1 c1 c1 c1 c1"
+            "c2 c2 c2 c2 c2 c2"
+            "st st st st st st"
+            "s1 s1 s1 s1 s1 s1" 
+            "s2 s2 s2 s2 s2 s2"
+            "s3 s3 s3 s3 s3 s3" 
+            "s4 s4 s4 s4 s4 s4";
+    }
+
+    .intro-text {
+        grid-area: it;
+        margin: 0.2em 5em 0.5em 5em;
+        line-height: 2.5em;
+    }
+
+    .locations-text{
+        grid-area: lt;
+        margin: 0.2em 5em 0.5em 5em;
+    }    
+
+    .location-1 {
+        grid-area: l1;
+        display: inline;
+        margin: 2em 5em 2em 5em;
+        place-items: center;
+    }
+    
+    .location-2 {
+        grid-area: l2;
+        display: inline;
+        margin: 2em 5em 2em 5em;
+        place-items: center;
+    }
+    
+    .location-3 {
+        grid-area: l3;
+        display: inline;
+        margin: 2em 5em 2em 5em;
+        place-items: center;
+    }
+    
+    .location-4 {
+        grid-area: l4;
+        display: inline;
+        margin: 2em 5em 2em 5em;
+        place-items: center;
+    }
+
+    .index-card-1 {
+        grid-area: c1;
+        margin: 2em 5em 10em 5em;
+        max-width: 40em;
+    }
+    
+    .index-card-2 {
+        grid-area: c2;
+        margin: 2em 5em 10em 5em;
+        max-width: 40em;
+    }
+
+    .sponser-text {
+        grid-area: st;
+        text-align: center;
+        font-size: 2.5em;
+        margin: 1.5em 5em 2.5em 5em;
+    }
+
+    .sponser-1 {
+        grid-area: s1;
+        display: grid;
+        place-items: center;
+        max-width: 18.75em;
+    }
+    
+    .sponser-2 {
+        grid-area: s2;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        place-items: center;
+        max-width: 18.75em;
+    }
+    
+    .sponser-3 {
+        grid-area: s3;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        max-width: 18.75em;
+    }
+    
+    .sponser-4 {
+        grid-area: s4;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        max-width: 18.75em;
+    }
+}
