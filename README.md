@@ -31,9 +31,14 @@ I have a long way to go before I can say I feel confident coding but I'm proud o
 
 # **Reference List:** #
  Minus18. (n.d.) *We're Minus18*. (online) Available at: <https://www.minus18.org.au/>
+ 
  Geek Markets. (2022). *Geek Markets Countdown*. (online) Available at: <http://www.canberrageekmarkets.com.au/>
+ 
  Headspace. (2022). *Be Kind to your Mind*. (online) Available at: <https://www.headspace.com/?%243p=a_google_adwords&%24always_deeplink=false&lpurl=https%3A%2F%2Fwww.headspace.com%3Fgclsrc%3Daw.ds%26&~ad_set_id=72181210273&~campaign_id=1940234794&~channel=g&~keyword=headspace&~placement&gclid=CjwKCAjwu_mSBhAYEiwA5BBmf_Y-OSU4TaVUaDt2JQtpefFbk11nh1hYWlnebelG0nokfQajuShjFBoCTEEQAvD_BwE&gclid=CjwKCAjwu_mSBhAYEiwA5BBmf_Y-OSU4TaVUaDt2JQtpefFbk11nh1hYWlnebelG0nokfQajuShjFBoCTEEQAvD_BwE&gclsrc=aw.ds&%24web_only=true&_branch_match_id=973718026449198014&utm_source=Google%20AdWords&utm_medium=paid%20advertising&_branch_referrer=H4sIAAAAAAAAA72Q0WqDMBSGn0bvqk10sx2Eoa2ObbBR2m70KhxNNGpMQmMX%2BvbTXvQRCufmnI%2Bf7%2FCLcTT2JQwFB2YNVHzheBmAMYFsVR%2FyEIx9X621%2FWLlq4fjyBCgjdaN5BSY02dm%2FekM0sHVUsa5mXOkBmm5L83lLImYFV6UeriYxjkX3GVBpQcvKppK2nPlRVtwAbMefva9JAdGLR9py0iC0QphtMRJNIMKBgNto2aE1vESR3Gyjm9EgFJckmZeen6d3yN3mT9ppsimc5%2BbtHMXOuwzkZ7y1qVPWTbU9LT43h%2FjA%2FwcYTvij91oeF2UPUJKIHH6lYqXXL4tle7rHXSXveiKTG8Oeb5L%2F7Y0c%2FljDFNV5FbUP8QmHWW8AQAA>
+ 
  Australian Red Cross. (2022). *Grants for People Effected by Floods Are Now Open*. (online) Available at: <https://www.redcross.org.au/>
+ 
  CodingNepal. (2019). *How to Create Responsive Navigation Bar using HTML and CSS*. YouTube. (online) Available at: <https://www.youtube.com/watch?v=oLgtucwjVII&ab_channel=CodingNepal>
+ 
  The WebShala. (2020). *Responsive Footer Design using Html & Css*. YouTube. (online) Available at: <https://www.youtube.com/watch?v=YOb67OKw62s&ab_channel=TheWebShala>
 
